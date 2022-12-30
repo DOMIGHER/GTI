@@ -15,9 +15,10 @@
             <h6 style="color:black;">  
                 <p align="center"><FONT FACE="Segoe UI" FONT SIZE="6"> Administra Camionetas </FONT></p>  
             </h6>
-          </div>
+                </div>
         </div>
-      </nav>
+        </nav>
+        
         <div class="container">
                 
             <p>Modelo: <?=$camioneta[0]->modelo?></p>
