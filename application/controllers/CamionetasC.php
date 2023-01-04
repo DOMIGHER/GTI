@@ -33,10 +33,10 @@ class CamionetasC extends CI_Controller{
         $this->load->helper(array('form', 'url'));
 
         $this->load->library('form_validation');
+
         $this->form_validation->set_rules('modelo', 'modelo', 'required');
-
+        
         if ($this->form_validation->run() == FALSE) {
-
             $this->load->view('Administrador/camioneta/insertcamionetaadminV');
 
         } else {
