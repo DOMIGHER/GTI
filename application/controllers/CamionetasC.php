@@ -10,13 +10,14 @@ class CamionetasC extends CI_Controller{
         $this->load->view('Administrador/camioneta/vercamionetaadminV',$data);
     }
 
+
     public function detallecamionetaadmin($idcamioneta){
         $this->load->model('CamionetasM');
         $data['camioneta'] = $this->CamionetasM->detallecamionetaadmin($idcamioneta);
 
         $this->load->view('Administrador/camioneta/detallescamionetaadminV',$data); 
-
     }
+
 
     public function borrarcamionetaadmin($idcamioneta){
         $this->load->model('CamionetasM');
@@ -25,8 +26,8 @@ class CamionetasC extends CI_Controller{
         if($this->CamionetasM->deletecamionetaadmin($idcamioneta)){
             redirect(base_url('index.php/CamionetasC/showcamionetasadmin'),'refresh');
         }
-
     }
+    
 
     public function insertcamionetasadmin(){
 
@@ -35,7 +36,7 @@ class CamionetasC extends CI_Controller{
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('modelo', 'modelo', 'required');
-        
+
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('Administrador/camioneta/insertcamionetaadminV');
 
